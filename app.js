@@ -1,4 +1,3 @@
-// 日付とタイムを格納する配列
 let dates = [];
 let times = [];
 
@@ -19,13 +18,21 @@ const timeChart = new Chart(ctx, {
     options: {
         scales: {
             x: {
-                type: 'time',
+                type: 'time',  // 日付をタイム形式に変更
                 time: {
                     unit: 'day'
+                },
+                title: {
+                    display: true,
+                    text: '日付'
                 }
             },
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'タイム（秒）'
+                }
             }
         }
     }
@@ -47,3 +54,4 @@ function addRecord() {
         alert('日付とタイムを正しく入力してください。');
     }
 }
+
