@@ -3,7 +3,7 @@ let times = [];
 
 // Chart.jsでグラフを描画する設定
 const ctx = document.getElementById('timeChart').getContext('2d');
-const timeChart = new Chart(ctx, {
+let timeChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: dates,
@@ -45,7 +45,7 @@ function addRecord() {
 
     if (dateInput && !isNaN(timeInput)) {
         // データを追加
-        dates.push(dateInput);
+        dates.push(new Date(dateInput));
         times.push(timeInput);
 
         // グラフを更新
@@ -54,4 +54,3 @@ function addRecord() {
         alert('日付とタイムを正しく入力してください。');
     }
 }
-
