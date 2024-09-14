@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイム記録アプリ</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>陸上タイム記録</h1>
+
+    <input type="date" id="dateInput" placeholder="日付を選択">
+    <input type="number" id="timeInput" placeholder="タイム（秒）">
+    <button onclick="addRecord()">記録を追加</button>
+
+    <canvas id="timeChart" width="400" height="200"></canvas>
+
+    <script src="app.js"></script>
+</body>
+</html>
